@@ -1,0 +1,17 @@
+.carousel .slide img{
+    width: 70%;
+    border-radius: 20px;
+    height: 500px;
+}
+
+.carousel-root{
+    margin-top: 60px;
+}
+
+.carousel .slide .legend{
+    visibility: hidden;
+}
+
+.carousel{
+    text-align: center;
+}

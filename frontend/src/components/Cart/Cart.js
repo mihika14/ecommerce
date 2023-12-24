@@ -48,6 +48,7 @@ class Cart extends Component {
     const { cartItems, subtotal } = this.state;
 
     return (
+      <div className="cart">
       <div className="cart-card">
         <p className="cart-title">Shopping Cart</p>
         <div className="cart-container">
@@ -69,6 +70,7 @@ class Cart extends Component {
           ))}
         </div>
         <p className="cart-subtotal">Subtotal: ₹{subtotal}</p>
+      </div>
       </div>
     );
   }

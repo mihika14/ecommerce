@@ -1,72 +1,76 @@
-.product-details{
+.product-details {
   display: flex;
-  flex-direction: row;
+  flex-direction: column-reverse;
+}
+
+.cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .cart-card {
-    width: 350px;
-    height: 350px;
-    background: #E8EAEA;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  .cart-title {
-    padding: 10px 15px;
-  }
-  
-  .cart-item {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 15px;
-  }
-  
-  .cart-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-grow: 1;
-  }
-  
-  .cart-container {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .cart-title {
-    font-weight: 900;
-    font-size: 1.3em;
-  }
-  
-  .cart-name {
-    font-weight: 800;
-  }
-  
-  .cart-price {
-    font-size: .9em;
-    color: #64696e;
-  }
-  
-  .cart-delete {
-    border: none;
-    border-radius: 25px;
-    background-color: #0f1113;
-    color: white;
-    padding: 8px 15px;
-    font-weight: 700;
-  }
-  
-  .more {
-    display: block;
-    text-decoration: none;
-    color: rgb(29, 155, 240);
-    font-weight: 800;
-  }
+  width: 350px;
+  height: auto;
+  background: #e8eaea;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
-  .ui.animated.button {
-    width: 89px;
-  }
+.cart-title {
+  padding: 10px 15px;
+}
+
+.cart-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+}
+
+.cart-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.cart-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-title {
+  font-weight: 900;
+  font-size: 1.3em;
+}
+
+.cart-name {
+  font-weight: 800;
+}
+
+.cart-price {
+  font-size: 0.9em;
+  color: #64696e;
+}
+
+.cart-delete {
+  border: none;
+  border-radius: 25px;
+  background-color: #0f1113;
+  color: white;
+  padding: 8px 15px;
+  font-weight: 700;
+}
+
+.more {
+  display: block;
+  text-decoration: none;
+  color: rgb(29, 155, 240);
+  font-weight: 800;
+}
+

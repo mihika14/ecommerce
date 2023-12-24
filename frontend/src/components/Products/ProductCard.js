@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import "./ProductCard.css";
 import Cart from "../Cart/Cart";
-import { Button, Icon } from 'semantic-ui-react'
+import { Button, Icon } from "semantic-ui-react";
 
 class ProductCard extends Component {
   constructor(props) {
@@ -128,17 +128,24 @@ class ProductCard extends Component {
                 src={image.urls.small}
                 alt={image.alt_description}
               />
-              <span className="product-price">
-                ₹{this.generateRandomPrice()}
-              </span>
-              <button
-                className="product-button"
-                onClick={() =>
-                  this.addToCart({ price: this.generateRandomPrice() })
-                }
-              >
-                Add to Cart
-              </button>
+              <div className="product-details">
+                <span className="product-price">
+                  ₹{this.generateRandomPrice()}
+                </span>
+                <button
+                  className="product-button c-button" 
+                  onClick={() =>
+                    this.addToCart({ price: this.generateRandomPrice() })
+                  }
+                >
+                  <span className="c-main">
+                    <span className="c-ico">
+                      <span className="ico-text">+</span>
+                    </span>
+                    Add to Cart
+                  </span>
+                </button>
+              </div>
             </div>
           ))}
         </div>
@@ -156,13 +163,18 @@ class ProductCard extends Component {
                 ₹{this.generateRandomPrice()}
               </span>
               <button
-                className="product-button"
-                onClick={() =>
-                  this.addToCart({ price: this.generateRandomPrice() })
-                }
-              >
-                Add to Cart
-              </button>
+                  className="product-button c-button" 
+                  onClick={() =>
+                    this.addToCart({ price: this.generateRandomPrice() })
+                  }
+                >
+                  <span className="c-main">
+                    <span className="c-ico">
+                      <span className="ico-text">+</span>
+                    </span>
+                    Add to Cart
+                  </span>
+                </button>
             </div>
           ))}
         </div>
@@ -180,13 +192,18 @@ class ProductCard extends Component {
                 ₹{this.generateRandomPrice()}
               </span>
               <button
-                className="product-button"
-                onClick={() =>
-                  this.addToCart({ price: this.generateRandomPrice() })
-                }
-              >
-                Add to Cart
-              </button>
+                  className="product-button c-button" 
+                  onClick={() =>
+                    this.addToCart({ price: this.generateRandomPrice() })
+                  }
+                >
+                  <span className="c-main">
+                    <span className="c-ico">
+                      <span className="ico-text">+</span>
+                    </span>
+                    Add to Cart
+                  </span>
+                </button>
             </div>
           ))}
         </div>
@@ -204,13 +221,18 @@ class ProductCard extends Component {
                 ₹{this.generateRandomPrice()}
               </span>
               <button
-                className="product-button"
-                onClick={() =>
-                  this.addToCart({ price: this.generateRandomPrice() })
-                }
-              >
-                Add to Cart
-              </button>
+                  className="product-button c-button" 
+                  onClick={() =>
+                    this.addToCart({ price: this.generateRandomPrice() })
+                  }
+                >
+                  <span className="c-main">
+                    <span className="c-ico">
+                      <span className="ico-text">+</span>
+                    </span>
+                    Add to Cart
+                  </span>
+                </button>
             </div>
           ))}
         </div>
@@ -224,23 +246,23 @@ class ProductCard extends Component {
                 src={image.urls.small}
                 alt={image.alt_description}
               />
-              <div className= 'product-details'> 
-              <span className="product-price">
-                ₹{this.generateRandomPrice()}
-              </span>
-              <Button
-                type="product-button"
-                className="product-button"
-                onClick={() =>
-                  this.addToCart({ price: this.generateRandomPrice() })
-                }
-                animated="vertical"
-              >
-                <Button.Content hidden>Add to Cart</Button.Content>
-                <Button.Content visible>
-                  <Icon name="shop" />
-                </Button.Content>
-              </Button>
+              <div className="product-details">
+                <span className="product-price">
+                  ₹{this.generateRandomPrice()}
+                </span>
+                <button
+                  className="product-button c-button" 
+                  onClick={() =>
+                    this.addToCart({ price: this.generateRandomPrice() })
+                  }
+                >
+                  <span className="c-main">
+                    <span className="c-ico">
+                      <span className="ico-text">+</span>
+                    </span>
+                    Add to Cart
+                  </span>
+                </button>
               </div>
             </div>
           ))}

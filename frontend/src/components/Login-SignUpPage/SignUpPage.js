@@ -54,18 +54,16 @@ export default class SignupPage extends Component {
   render() {
     return (
       <>
-          <div className="form">
-            <form class="form-container" onSubmit={this.handleSubmit}>
-              <span class="title">Sign up</span>
-              <div class="form-group">
-                <label className="label">Enter Email-ID</label>
+          <div className="login-form">
+            <form class="form" onSubmit={this.handleSubmit}>
+              <div class="header">Sign up</div>
+              <div class="inputs">
                 <input
                   type="email"
-                  class="input"
+                  className="input"
                   placeholder="Email"
                   onChange={(e) => this.setState({ email: e.target.value })}
                 />
-                <label className="label">Enter Password</label>
                 <input
                   type="password"
                   class="input"
@@ -75,7 +73,8 @@ export default class SignupPage extends Component {
                 />
               </div>
 
-              <button>Sign up</button>
+              <button type="submit" className="sigin-btn">Sign up</button>
+              <p class="signup-link">Already have an account? <Link to="/loginpage">Login</Link></p>
           
             </form>
           </div>

@@ -2,6 +2,14 @@ import React, { Component } from "react";
 import axios from "axios";
 import './Cart.css';
 
+export const calculateSubtotal = (cartItems) => {
+  let subtotal = 0;
+  for (const item of cartItems) {
+    subtotal += item.price;
+  }
+  return subtotal;
+};
+
 class Cart extends Component {
   constructor(props) {
     super(props);
@@ -13,14 +21,6 @@ class Cart extends Component {
 
   componentDidMount() {
     this.fetchCartItems(); 
-  }
-
-  calculateSubtotal(cartItems) {
-    let subtotal = 0;
-    for (const item of cartItems) {
-      subtotal += item.price;
-    }
-    return subtotal;
   }
 
   deleteCartItem = async (id) => { 
@@ -36,7 +36,7 @@ class Cart extends Component {
     axios.get("http://localhost:5000/cartitems")
       .then((response) => {
         const cartItems = response.data;
-        const subtotal = this.calculateSubtotal(cartItems);
+        const subtotal = calculateSubtotal(cartItems); // Use the exported function here
         this.setState({ cartItems, subtotal });
       })
       .catch((error) => {
@@ -49,28 +49,28 @@ class Cart extends Component {
 
     return (
       <div className="cart">
-      <div className="cart-card">
-        <p className="cart-title">Shopping Cart</p>
-        <div className="cart-container">
-          {cartItems.map((item) => (
-            <div className="cart-item" key={item._id}> 
-              <div className="cart-content">
-                <div className="cart-text">
-                  <span className="cart-name">{item.name}</span>
-                  <p className="cart-price">₹{item.price}</p>
+        <div className="cart-card">
+          <p className="cart-title">Shopping Cart</p>
+          <div className="cart-container">
+            {cartItems.map((item) => (
+              <div className="cart-item" key={item._id}> 
+                <div className="cart-content">
+                  <div className="cart-text">
+                    <span className="cart-name">{item.name}</span>
+                    <p className="cart-price">₹{item.price}</p>
+                  </div>
+                  <button
+                    className="cart-delete"
+                    onClick={() => this.deleteCartItem(item._id)} 
+                  >
+                    Delete
+                  </button>
                 </div>
-                <button
-                  className="cart-delete"
-                  onClick={() => this.deleteCartItem(item._id)} 
-                >
-                  Delete
-                </button>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+          <p className="cart-subtotal">Subtotal: ₹{subtotal}</p>
         </div>
-        <p className="cart-subtotal">Subtotal: ₹{subtotal}</p>
-      </div>
       </div>
     );
   }

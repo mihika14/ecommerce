@@ -237,7 +237,7 @@ class ProductCard extends Component {
           ))}
         </div>
 
-        <h2 className="product-header">Toys</h2>
+        <h2 className="product-header">Toys & more</h2>
         <div className="productcard-container">
           {this.state.babyImages.map((image, index) => (
             <div className="product-card" key={index}>

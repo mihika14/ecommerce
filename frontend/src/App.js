@@ -6,6 +6,7 @@ import Footer from "./components/Footer/Footer";
 import Cart from "./components/Cart/Cart";
 import LoginPage from "./components/Login-SignUpPage/LoginPage";
 import SignUpPage from "./components/Login-SignUpPage/SignUpPage";
+import Checkout from "./components/Checkout/Checkout";
 import {Routes, Route,  } from 'react-router-dom';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <Route exact path="/footer" element= {<Footer/>} />
       <Route exact path="/signuppage" element= {<SignUpPage/>} />
       <Route exact path="/cart" element= {<Cart/>} />
+      <Route exact path="/payment" element={<Checkout/>} />
       </Routes>
     </div>
   );

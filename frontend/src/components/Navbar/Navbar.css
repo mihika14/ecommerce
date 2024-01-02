@@ -10,6 +10,8 @@
   color: #fff;
 }
 .main-navbar .top-navbar .nav-link{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 700;
   color: #fff;
   font-size: 16px;
   font-weight: 500;
@@ -34,6 +36,8 @@
   background-color: #ddd;
 }
 .main-navbar .navbar .nav-item .nav-link{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 700;
   padding: 8px 20px;
   color: #000;
   font-size: 15px;

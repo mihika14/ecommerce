@@ -5,6 +5,7 @@ import './payment.css';
 // import paytm from './assests/paytm.jpeg'
 import { PayPalButtons } from '@paypal/react-paypal-js';
 import PaypalCheckoutButton from './PaypalCheckoutButton';
+import { calculateSubtotal } from '../Cart/Cart';
 
 const Checkout = (props) => {
     const product = {

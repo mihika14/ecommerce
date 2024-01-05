@@ -98,7 +98,7 @@ class ProductCard extends Component {
   }
 
   generateRandomPrice() {
-    return Math.floor(Math.random() * (50000 - 10000 + 1)) + 10000;
+    return Math.floor(Math.random() * (5000 - 1000 + 1)) + 1000;
   }
 
   addToCart(item) {
@@ -130,7 +130,7 @@ class ProductCard extends Component {
               />
               <div className="product-details">
                 <span className="product-price">
-                  ₹{this.generateRandomPrice()}
+                  ${this.generateRandomPrice()}
                 </span>
                 <button
                   className="product-button c-button" 
@@ -160,7 +160,7 @@ class ProductCard extends Component {
                 alt={image.alt_description}
               />
               <span className="product-price">
-                ₹{this.generateRandomPrice()}
+               ${this.generateRandomPrice()}
               </span>
               <button
                   className="product-button c-button" 
@@ -189,7 +189,7 @@ class ProductCard extends Component {
                 alt={image.alt_description}
               />
               <span className="product-price">
-                ₹{this.generateRandomPrice()}
+                4{this.generateRandomPrice()}
               </span>
               <button
                   className="product-button c-button" 
@@ -218,7 +218,7 @@ class ProductCard extends Component {
                 alt={image.alt_description}
               />
               <span className="product-price">
-                ₹{this.generateRandomPrice()}
+                ${this.generateRandomPrice()}
               </span>
               <button
                   className="product-button c-button" 
@@ -248,7 +248,7 @@ class ProductCard extends Component {
               />
               <div className="product-details">
                 <span className="product-price">
-                  ₹{this.generateRandomPrice()}
+                  ${this.generateRandomPrice()}
                 </span>
                 <button
                   className="product-button c-button" 

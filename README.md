@@ -48,21 +48,21 @@ This is an e-commerce website developed using React, Node.js, MongoDB, and Expre
 1. Clone this repository.
 2. Navigate to the project directory.
 3. Install dependencies:
-4. Backend
-    bcrypt
-    cors
-    express
-    jsonwebtoken
-    mongodb
-    mongoose
+4. Backend dependencies:
+    bcrypt,
+    cors,
+    express,
+    jsonwebtoken,
+    mongodb,
+    mongoose,
     nodemon
-5. Frontend
-    axios
-    bootstrap
-    react-icons
-    react-responsive-carousel
-    react-router-dom
-    semantic-ui-react
+5. Frontend dependencies
+    axios,
+    bootstrap,
+    react-icons,
+    react-responsive-carousel,
+    react-router-dom,
+    semantic-ui-react,
     sweetalert2
        
 6. cd frontend && npm install

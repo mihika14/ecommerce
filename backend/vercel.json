@@ -1,15 +1,19 @@
 {
     "version": 2,
-    "builds": [
-        {
-            "src": "*.js",
-            "use": "@vercel/node"
-        }
-    ],
     "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "/"
-        }
+      { "handle": "filesystem" },
+      { "src": "/createuser", "dest": "/backend/main.js" },
+      { "src": "/loginuser", "dest": "/backend/main.js" },
+      { "src": "/cartitems", "dest": "/backend/main.js" },
+      { "src": "/cartitems/:id", "dest": "/backend/main.js" },
+      { "src": "/additem", "dest": "/backend/main.js" },
+      { "src": "/(.*)", "dest": "/backend/main.js" }
+    ],
+    "builds": [
+      {
+        "src": ".",
+        "use": "@vercel/node"
+      }
     ]
-}
+  }
+  

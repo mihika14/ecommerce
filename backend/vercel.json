@@ -8,12 +8,6 @@
       { "src": "/cartitems/:id", "dest": "/backend/main.js" },
       { "src": "/additem", "dest": "/backend/main.js" },
       { "src": "/(.*)", "dest": "/backend/main.js" }
-    ],
-    "builds": [
-      {
-        "src": "/(.*)",
-        "use": "@vercel/node"
-      }
     ]
   }
   
